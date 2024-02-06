@@ -1,0 +1,253 @@
+$blue: #0A327B;
+$red: #F65552;
+$veryDarkGreyBlue: #1C202B;
+$darkGreyBlue: #5E6778;
+$greyBlue: #939CAD;
+$lightGreyBlue: #E5EFFA;
+$veryLightGreyBlue: #DDE7EE;
+$snow: #F7FAFD;
+$white: #FFFFFF;
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100%;
+  width: 100vw;
+  background-color: $snow;
+  display: grid;
+  place-content: center;
+}
+
+main {
+  width: 730px;
+  color: $veryDarkGreyBlue;
+  background-color: $white;
+  padding: 32px;
+  box-shadow: 0px 20px 60px 0px rgba(73, 97, 168, 0.05);
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+    margin-bottom: 24px;
+
+    .notifications-info {
+      display: flex;
+      align-items: center;
+
+        h1 {
+          font-size: 24px;
+          font-weight: 800;
+        }
+    
+        p {
+          margin-left: 12px;
+          width: 32px;
+          height: 25px;
+          text-align: center;
+          border-radius: 6px;
+          color: $white;
+          background-color: $blue;
+        }
+    }
+
+    button {
+      border: none;
+      background: none;
+      color: $darkGreyBlue;
+      font-size: 16px;
+      font-weight: 500;
+      transition: all 0.2s;
+
+      &:hover {
+        cursor: pointer;
+        color: $blue;
+      }
+    }
+  }
+
+  .notifications-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: space-between;
+    width: 100%;
+  }
+
+
+  .new-notification-container {
+    background-color: $snow;
+
+  }
+
+  .notification-container {
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 8px; 
+    display: flex;
+    width: 100%;
+
+    
+    .avatar {
+      width: 45px;
+      height: 45px;
+      margin-right: 20px;
+    }
+
+    .notification {
+      width: 100%;
+
+      .notification-text {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        // align-items: center;
+
+        .profile-name {
+          font-size: 16px;
+          font-weight: 800;
+          transition: all 0.2s;
+
+          &:hover {
+            color: $blue;
+            cursor: pointer;
+          }
+        }
+  
+        .notification-action {
+          color: $darkGreyBlue;
+          font-size: 16px;
+          font-weight: 500;
+        }
+  
+        .relevant-link {
+          color: $darkGreyBlue;
+          font-size: 16px;
+          font-weight: 800;
+          transition: all 0.2s;
+
+          &:hover {
+            color: $blue;
+            cursor: pointer;
+          }
+        }
+
+        .group {
+          color: $blue;
+        }
+  
+        .new-notification-icon {
+          display: inline-block;
+          background-color: $red;
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          margin-left: 6px;
+        }
+
+        .notification-image {
+          width: 45px;
+          height: 45px;
+          border-radius: 7px;
+          display: inline-block;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+      
+      
+
+      .private-message {
+        border: 1px solid $veryLightGreyBlue;
+        border-radius: 5px;
+        padding: 20px;
+
+        color: $darkGreyBlue;
+        transition: all 0.3s;
+
+
+        &:hover {
+          cursor: pointer;
+          background-color: $lightGreyBlue;
+        } 
+      }
+
+      
+    }
+
+    .time {
+      color: $greyBlue;
+      font-size: 16px;
+      font-weight: 500;
+      display: inline;
+    }
+
+  }
+}
+
+
+@media (max-width: 768px) {
+  main {
+    width: 100vw;
+    height: 100vh;
+    overflow-y: scroll;
+
+    .header {
+      margin-top: 0;
+    }
+  }
+}
+
+@media (max-width: 555px) {
+  //Make all fonts sizes smaller proportionate to their original size
+  main {
+    padding: 16px;
+
+    .header {
+      .notifications-info {
+        h1 {
+          font-size: 20px;
+        }
+      }
+
+      button {
+        font-size: 14px;
+      }
+    }
+
+    .notification-container {
+      .notification {
+        .notification-text {
+          font-size: 14px;
+          .profile-name {
+            font-size: 14px;
+          }
+  
+          .notification-action {
+            font-size: 14px;
+          }
+  
+          .relevant-link {
+            font-size: 14px;
+          }
+        }
+
+        .private-message {
+          font-size: 14px;
+        }
+
+        .time {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+} 

@@ -1,0 +1,19 @@
+const Notification = ({isNew, profileName, notificationAction, relevantLink, time, privateMessage, imageUrl}) => {
+    const srcProfileName = profileName.toLowerCase().replace(/ /g, '-')
+
+    return (
+    <div className={`notification-container ${isNew && `new-notification-container`}`}>
+        <img src={`avatar-${srcProfileName}.webp`} alt="avatar" className="avatar"/>
+        <div className="notification">
+            <div className="notification-text">
+                <div className=""><a className='profile-name'>{profileName}</a>&nbsp; {notificationAction} <a className={`relevant-link ${relevantLink.isGroup && "group"}`}>&nbsp; {relevantLink && relevantLink.message}</a><div className={`${isNew && `new-notification-icon`}`}></div></div>
+                {imageUrl && <img src={imageUrl} className="notification-image" />}
+            </div>
+            <p className='time'>{time} ago</p>
+            {privateMessage && <p className='private-message'>{privateMessage}</p>}
+        </div>
+    </div>
+    )
+}
+
+export default Notification

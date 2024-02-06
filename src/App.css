@@ -1,0 +1,187 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100%;
+  width: 100vw;
+  background-color: #F7FAFD;
+  display: grid;
+  place-content: center;
+}
+
+main {
+  width: 730px;
+  color: #1C202B;
+  background-color: #FFFFFF;
+  padding: 32px;
+  box-shadow: 0px 20px 60px 0px rgba(73, 97, 168, 0.05);
+}
+main .header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+main .header .notifications-info {
+  display: flex;
+  align-items: center;
+}
+main .header .notifications-info h1 {
+  font-size: 24px;
+  font-weight: 800;
+}
+main .header .notifications-info p {
+  margin-left: 12px;
+  width: 32px;
+  height: 25px;
+  text-align: center;
+  border-radius: 6px;
+  color: #FFFFFF;
+  background-color: #0A327B;
+}
+main .header button {
+  border: none;
+  background: none;
+  color: #5E6778;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+main .header button:hover {
+  cursor: pointer;
+  color: #0A327B;
+}
+main .notifications-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: space-between;
+  width: 100%;
+}
+main .new-notification-container {
+  background-color: #F7FAFD;
+}
+main .notification-container {
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 8px;
+  display: flex;
+  width: 100%;
+}
+main .notification-container .avatar {
+  width: 45px;
+  height: 45px;
+  margin-right: 20px;
+}
+main .notification-container .notification {
+  width: 100%;
+}
+main .notification-container .notification .notification-text {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+main .notification-container .notification .notification-text .profile-name {
+  font-size: 16px;
+  font-weight: 800;
+  transition: all 0.2s;
+}
+main .notification-container .notification .notification-text .profile-name:hover {
+  color: #0A327B;
+  cursor: pointer;
+}
+main .notification-container .notification .notification-text .notification-action {
+  color: #5E6778;
+  font-size: 16px;
+  font-weight: 500;
+}
+main .notification-container .notification .notification-text .relevant-link {
+  color: #5E6778;
+  font-size: 16px;
+  font-weight: 800;
+  transition: all 0.2s;
+}
+main .notification-container .notification .notification-text .relevant-link:hover {
+  color: #0A327B;
+  cursor: pointer;
+}
+main .notification-container .notification .notification-text .group {
+  color: #0A327B;
+}
+main .notification-container .notification .notification-text .new-notification-icon {
+  display: inline-block;
+  background-color: #F65552;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-left: 6px;
+}
+main .notification-container .notification .notification-text .notification-image {
+  width: 45px;
+  height: 45px;
+  border-radius: 7px;
+  display: inline-block;
+}
+main .notification-container .notification .notification-text .notification-image:hover {
+  cursor: pointer;
+}
+main .notification-container .notification .private-message {
+  border: 1px solid #DDE7EE;
+  border-radius: 5px;
+  padding: 20px;
+  color: #5E6778;
+  transition: all 0.3s;
+}
+main .notification-container .notification .private-message:hover {
+  cursor: pointer;
+  background-color: #E5EFFA;
+}
+main .notification-container .time {
+  color: #939CAD;
+  font-size: 16px;
+  font-weight: 500;
+  display: inline;
+}
+
+@media (max-width: 768px) {
+  main {
+    width: 100vw;
+    height: 100vh;
+    overflow-y: scroll;
+  }
+  main .header {
+    margin-top: 0;
+  }
+}
+@media (max-width: 555px) {
+  main {
+    padding: 16px;
+  }
+  main .header .notifications-info h1 {
+    font-size: 20px;
+  }
+  main .header button {
+    font-size: 14px;
+  }
+  main .notification-container .notification .notification-text {
+    font-size: 14px;
+  }
+  main .notification-container .notification .notification-text .profile-name {
+    font-size: 14px;
+  }
+  main .notification-container .notification .notification-text .notification-action {
+    font-size: 14px;
+  }
+  main .notification-container .notification .notification-text .relevant-link {
+    font-size: 14px;
+  }
+  main .notification-container .notification .private-message {
+    font-size: 14px;
+  }
+  main .notification-container .notification .time {
+    font-size: 14px;
+  }
+}/*# sourceMappingURL=App.css.map */
