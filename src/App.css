@@ -7,15 +7,15 @@
 body {
   height: 100%;
   width: 100vw;
-  background-color: #F7FAFD;
+  background-color: #f7fafd;
   display: grid;
   place-content: center;
 }
 
 main {
   width: 730px;
-  color: #1C202B;
-  background-color: #FFFFFF;
+  color: #1c202b;
+  background-color: #ffffff;
   padding: 32px;
   box-shadow: 0px 20px 60px 0px rgba(73, 97, 168, 0.05);
 }
@@ -39,20 +39,20 @@ main .header .notifications-info p {
   height: 25px;
   text-align: center;
   border-radius: 6px;
-  color: #FFFFFF;
-  background-color: #0A327B;
+  color: #ffffff;
+  background-color: #0a327b;
 }
 main .header button {
   border: none;
   background: none;
-  color: #5E6778;
+  color: #5e6778;
   font-size: 16px;
   font-weight: 500;
   transition: all 0.2s;
 }
 main .header button:hover {
   cursor: pointer;
-  color: #0A327B;
+  color: #0a327b;
 }
 main .notifications-container {
   display: flex;
@@ -62,7 +62,7 @@ main .notifications-container {
   width: 100%;
 }
 main .new-notification-container {
-  background-color: #F7FAFD;
+  background-color: #f7fafd;
 }
 main .notification-container {
   border-radius: 8px;
@@ -76,81 +76,89 @@ main .notification-container .avatar {
   height: 45px;
   margin-right: 20px;
 }
-main .notification-container .notification {
+main .notification-container .private-message-container {
   width: 100%;
 }
-main .notification-container .notification .notification-text {
-  width: 100%;
+main .notification-container .private-message-container .private-message {
+  border: 1px solid #dde7ee;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 10px;
+  color: #5e6778;
+  transition: all 0.3s;
+}
+main .notification-container .private-message-container .private-message:hover {
+  cursor: pointer;
+  background-color: #e5effa;
+}
+main .notification-container .notification {
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
-main .notification-container .notification .notification-text .profile-name {
+main .notification-container .notification .notification-body {
+  width: 100%;
+}
+main .notification-container .notification .notification-body .notification-text {
+  color: #5e6778;
+}
+main .notification-container .notification .notification-body .profile-name {
   font-size: 16px;
   font-weight: 800;
   transition: all 0.2s;
+  color: #1c202b;
 }
-main .notification-container .notification .notification-text .profile-name:hover {
-  color: #0A327B;
+main .notification-container .notification .notification-body .profile-name:hover {
+  color: #0a327b;
   cursor: pointer;
 }
-main .notification-container .notification .notification-text .notification-action {
-  color: #5E6778;
+main .notification-container .notification .notification-body .notification-action {
+  color: #5e6778;
   font-size: 16px;
   font-weight: 500;
 }
-main .notification-container .notification .notification-text .relevant-link {
-  color: #5E6778;
+main .notification-container .notification .notification-body .relevant-link {
+  color: #5e6778;
   font-size: 16px;
   font-weight: 800;
   transition: all 0.2s;
 }
-main .notification-container .notification .notification-text .relevant-link:hover {
-  color: #0A327B;
+main .notification-container .notification .notification-body .relevant-link:hover {
+  color: #0a327b;
   cursor: pointer;
 }
-main .notification-container .notification .notification-text .group {
-  color: #0A327B;
+main .notification-container .notification .notification-body .group {
+  color: #0a327b;
 }
-main .notification-container .notification .notification-text .new-notification-icon {
+main .notification-container .notification .notification-body .new-notification-icon {
   display: inline-block;
-  background-color: #F65552;
+  background-color: #f65552;
   width: 8px;
   height: 8px;
   border-radius: 50%;
   margin-left: 6px;
 }
-main .notification-container .notification .notification-text .notification-image {
+main .notification-container .notification .time {
+  color: #939cad;
+  font-size: 16px;
+  font-weight: 500;
+}
+main .notification-container .notification .notification-image {
   width: 45px;
   height: 45px;
   border-radius: 7px;
   display: inline-block;
 }
-main .notification-container .notification .notification-text .notification-image:hover {
+main .notification-container .notification .notification-image:hover {
   cursor: pointer;
-}
-main .notification-container .notification .private-message {
-  border: 1px solid #DDE7EE;
-  border-radius: 5px;
-  padding: 20px;
-  color: #5E6778;
-  transition: all 0.3s;
-}
-main .notification-container .notification .private-message:hover {
-  cursor: pointer;
-  background-color: #E5EFFA;
-}
-main .notification-container .time {
-  color: #939CAD;
-  font-size: 16px;
-  font-weight: 500;
-  display: inline;
 }
 
 @media (max-width: 768px) {
   main {
-    width: 100vw;
+    width: 95vw;
     height: 100vh;
     overflow-y: scroll;
+    margin-right: 16px;
   }
   main .header {
     margin-top: 0;
@@ -166,6 +174,9 @@ main .notification-container .time {
   main .header button {
     font-size: 14px;
   }
+  main .notification-container .private-message {
+    font-size: 14px;
+  }
   main .notification-container .notification .notification-text {
     font-size: 14px;
   }
@@ -178,10 +189,7 @@ main .notification-container .time {
   main .notification-container .notification .notification-text .relevant-link {
     font-size: 14px;
   }
-  main .notification-container .notification .private-message {
-    font-size: 14px;
-  }
   main .notification-container .notification .time {
-    font-size: 14px;
+    font-size: 12px;
   }
 }/*# sourceMappingURL=App.css.map */
