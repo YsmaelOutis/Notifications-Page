@@ -173,7 +173,6 @@ main {
         color: $greyBlue;
         font-size: 16px;
         font-weight: 500;
-        // display: inline-block;
       }
 
       .notification-image {
@@ -192,7 +191,7 @@ main {
 
 @media (max-width: 768px) {
   main {
-    width: 95vw;
+    width: 100vw;
     height: 100vh;
     overflow-y: scroll;
     margin-right: 16px;
