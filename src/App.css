@@ -165,7 +165,7 @@ main .notification-container .notification .notification-image:hover {
 }
 @media (max-width: 555px) {
   main {
-    padding: 16px;
+    padding: 16px 16px 16px 24px;
   }
   main .header .notifications-info h1 {
     font-size: 20px;
